@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer-bg d-grid gap-4">
       <Container className="py-2 px-0">
         <div className="footer-area">
-          <div className="row row-gap-4">
+          <div className="row">
             <div className="col-lg-3">
               <div className="footer-item text-center text-md-start">
                 <Link to="/">
@@ -18,50 +18,64 @@ const Footer = () => {
             <div className="col-lg-7">
               <div className="footer-weget">
                 <div className="footer-item d-none d-lg-block">
-                  <ul>
-                    <li>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="http://testnet-explorer.coinsec.network/"
-                      >
-                        Explorer
-                      </a>
-                    </li>
-                    <li>
-                      <Link to="/">Our Network</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Status</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Mining Pool</Link>
-                    </li>
-                    <li>
-                      <Link to="/">GitHub</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Documentation</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Research</Link>
-                    </li>
-                    <li>
-                      <Link to="/">Ecosystem</Link>
-                    </li>
-                    <li>
-                      <Link to="/terms-conditions">Terms & Conditions</Link>
-                    </li>
-                    <li>
-                      <Link to="/terms">Terms of Use</Link>
-                    </li>
-                    <li>
-                      <Link to="/privacy-policy">Privacy Policy</Link>
-                    </li>
-                    <li>
-                      <Link to="/legal-disclaimer">Legal Disclaimer</Link>
-                    </li>
-                  </ul>
+                  <div className="footerLinks">
+                    <div>
+                      <ul>
+                        {" "}
+                        <li>
+                          <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="http://testnet-explorer.coinsec.network/"
+                          >
+                            Explorer
+                          </a>
+                        </li>
+                        <li>
+                          <Link to="/">Our Network</Link>
+                        </li>
+                        <li>
+                          <Link to="/">Status</Link>
+                        </li>
+                        <li>
+                          <Link to="/">Mining Pool</Link>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="middleRow">
+                      <ul>
+                        <li>
+                          <Link to="/">GitHub</Link>
+                        </li>
+                        <li>
+                          <Link to="/">Documentation</Link>
+                        </li>
+                        <li>
+                          <Link to="/">Research</Link>
+                        </li>
+                        <li>
+                          <Link to="/">Ecosystem</Link>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul>
+                        {" "}
+                        <li>
+                          <Link to="/terms-conditions">Terms & Conditions</Link>
+                        </li>
+                        <li>
+                          <Link to="/terms">Terms of Use</Link>
+                        </li>
+                        <li>
+                          <Link to="/privacy-policy">Privacy Policy</Link>
+                        </li>
+                        <li>
+                          <Link to="/legal-disclaimer">Legal Disclaimer</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div className="footer-list-phone-show d-lg-none">
                   <div className="d-flex justify-content-center gap-3">
@@ -74,9 +88,7 @@ const Footer = () => {
             </div>
             <div className="col-lg-2">
               <div className="footer-item connect-icon">
-                <div className="fs-14 text-center text-md-end">
-                  Connect with us{" "}
-                </div>
+                <div className="fs-14 text-center">Connect with us </div>
                 <ul>
                   <li>
                     <a
