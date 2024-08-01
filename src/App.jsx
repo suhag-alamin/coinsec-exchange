@@ -3,35 +3,21 @@ import { useEffect, useRef, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import io from "socket.io-client";
 import Layout from "./components/Layout";
-import LastBlocksContext from "./context/LastBlocksContext";
-import Home from "./pages/Home";
-import Blocks from "./pages/Blocks";
-import Transactions from "./pages/Transactions";
-import BlockDetails from "./pages/BlockDetails";
-import PriceContext from "./context/PriceContext";
 import BlueScoreContext from "./context/BlueScoreContext";
-import TransactionDetails from "./pages/TransactionDetails";
+import LastBlocksContext from "./context/LastBlocksContext";
+import PriceContext from "./context/PriceContext";
+import Home from "./pages/Home";
+import LegalDisclaimer from "./pages/LegalDisclaimer";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import TermsConditions from "./pages/TermsConditions";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import LegalDisclaimer from "./pages/LegalDisclaimer";
 
 const socket = io("wss://api.kaspa.org", {
   path: "/ws/socket.io",
 });
 
 const App = () => {
-  // const Wrapper = ({ children }) => {
-  //   const location = useLocation();
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       document.documentElement.scrollTo(0, 0);
-  //     }, 0);
-  //   }, [location.pathname, location.search]);
-  //   return children;
-  // };
-
   const [price, setPrice] = useState("");
   const [marketData, setMarketData] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -117,38 +103,7 @@ const App = () => {
                         </Layout>
                       }
                     />
-                    <Route
-                      path="/blocks"
-                      element={
-                        <Layout>
-                          <Blocks />
-                        </Layout>
-                      }
-                    />
-                    <Route
-                      path="/blocks/:id"
-                      element={
-                        <Layout>
-                          <BlockDetails />
-                        </Layout>
-                      }
-                    />
-                    <Route
-                      path="/transactions"
-                      element={
-                        <Layout>
-                          <Transactions />
-                        </Layout>
-                      }
-                    />
-                    <Route
-                      path="/transactions/:id"
-                      element={
-                        <Layout>
-                          <TransactionDetails />
-                        </Layout>
-                      }
-                    />
+
                     <Route
                       path="/terms"
                       element={
