@@ -1,0 +1,432 @@
+@use "sass:color";
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Neusa Next Std Trial";
+  src: url("/assets/fonts/NeusaNextStdTrial/3f4d29103a48afb3a35d288dd32ba8ad.eot");
+  src: url("/assets/fonts/NeusaNextStdTrial/3f4d29103a48afb3a35d288dd32ba8ad.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/NeusaNextStdTrial/3f4d29103a48afb3a35d288dd32ba8ad.woff")
+      format("woff"),
+    url("/assets/fonts/NeusaNextStdTrial/3f4d29103a48afb3a35d288dd32ba8ad.woff2")
+      format("woff2"),
+    url("/assets/fonts/NeusaNextStdTrial/3f4d29103a48afb3a35d288dd32ba8ad.ttf")
+      format("truetype"),
+    url("/assets/fonts/NeusaNextStdTrial/3f4d29103a48afb3a35d288dd32ba8ad.svg#Neusa Next Std Trial")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neusa Next Std Trial Medium";
+  src: url("/assets/fonts/NeusaNextStdTrial/7096607dda1089b375c48af13d0a5687.eot");
+  src: url("/assets/fonts/NeusaNextStdTrial/7096607dda1089b375c48af13d0a5687.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/NeusaNextStdTrial/7096607dda1089b375c48af13d0a5687.woff2")
+      format("woff2"),
+    url("/assets/fonts/NeusaNextStdTrial/7096607dda1089b375c48af13d0a5687.woff")
+      format("woff"),
+    url("/assets/fonts/NeusaNextStdTrial/7096607dda1089b375c48af13d0a5687.ttf")
+      format("truetype"),
+    url("/assets/fonts/NeusaNextStdTrial/7096607dda1089b375c48af13d0a5687.svg#Neusa Next Std Trial Medium")
+      format("svg");
+}
+
+:root {
+  --color: #94a8fd;
+}
+
+$color0: #94a8fd;
+$color1: #f6f5f4;
+$color2: #94a9fc;
+$color3: #42598e;
+$color4: #7f8994;
+$color5: #161a25;
+$superdark: $color5;
+$border: rgba(148, 168, 253, 0.08);
+$borderLight: rgba(148, 168, 253, 0.2);
+$borderMedium: rgba(148, 168, 253, 0.5);
+
+body {
+  font-family: "Neusa Next Std Trial";
+  color: $color0 !important;
+  line-height: 1.2;
+  height: 100%;
+  background: #004e97;
+  font-size: 14px;
+}
+
+a {
+  color: $color0 !important;
+}
+
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000 0.02%, #004e97 99.98%);
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.content {
+  padding-top: 80px;
+  height: 100vh;
+  font-family: "Neusa Next Std Trial";
+}
+
+.border {
+  border: 1px solid $color0 !important;
+}
+
+.fs-32 {
+  @media (max-width: 575.98px) {
+    font-size: 22px;
+  }
+}
+
+.fs-24 {
+  line-height: 120%;
+
+  @media (max-width: 575.98px) {
+    font-size: 19px;
+  }
+}
+
+.fs-20 {
+  line-height: 140%;
+
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+  }
+
+  .fw-500 {
+    color: $color0;
+  }
+}
+
+.fs-40 {
+  @media (max-width: 575.98px) {
+    font-size: 27px;
+  }
+}
+
+.fw-500 {
+  font-family: "Neusa Next Std Trial Medium" !important;
+}
+
+.mb--20 {
+  margin-bottom: -20px;
+
+  @media (max-width: 575.98px) {
+    margin-bottom: 0;
+  }
+}
+
+// Navbar
+
+.navbar-main {
+  background: linear-gradient(0deg, #000 0%, #2c3036 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 0 !important;
+  overflow: hidden;
+
+  .container {
+    padding: 0;
+
+    @media (max-width: 1230px) {
+      padding: 0 15px;
+    }
+  }
+
+  .NavList {
+    gap: 42px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 69px;
+    margin-right: 66px;
+
+    a {
+      color: $color0;
+      font-size: 16px;
+      font-family: "Neusa Next Std Trial";
+      font-weight: 500;
+      padding: 0 !important;
+      margin: 0;
+      display: flex;
+      align-items: center;
+
+      &.active {
+        color: $color0;
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      gap: 30px;
+    }
+  }
+
+  .nav-link {
+    color: $color0;
+    font-size: 16px;
+    font-family: "Neusa Next Std Trial Medium";
+    font-weight: 500;
+    padding: 0 !important;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    &.active {
+      color: $color0;
+    }
+  }
+
+  .nav-right-icons {
+    @media (max-width: 575.98px) {
+      flex-direction: row !important;
+    }
+  }
+
+  .navIcon {
+    font-size: 30px;
+    padding: 7px !important;
+    margin: 0px;
+    margin-right: 25px;
+
+    color: $color0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    &.active {
+      color: $color0;
+    }
+
+    @media (max-width: 1199.98px) {
+      margin: 0 10px;
+    }
+
+    @media (max-width: 575.98px) {
+      margin: 0 0;
+      font-size: 25px;
+    }
+  }
+
+  .loginNav {
+    background: $color0;
+    color: #232731;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    height: 70px;
+    padding: 0 18px !important;
+    gap: 7px;
+
+    @media (max-width: 991.98px) {
+      height: 60px;
+    }
+
+    @media (max-width: 575.98px) {
+      padding: 0 10px !important;
+      height: 50px;
+    }
+  }
+
+  .navbar-toggler {
+    padding: 12px 5px;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(82%) sepia(43%) saturate(464%) hue-rotate(194deg)
+        brightness(98%) contrast(103%);
+    }
+  }
+
+  .navbar-brand {
+    @media (max-width: 575.98px) {
+      img {
+        height: 35px;
+      }
+    }
+  }
+}
+
+.loginBtn {
+  display: flex;
+  padding: 25px 26.973px 25.943px 26px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(352deg, #000 6.23%, #94a8fd 93.77%);
+  border: none;
+  outline: none;
+  color: $color0;
+  font-family: "Neusa Next Std Trial";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%; /* 19.2px */
+  text-transform: capitalize;
+  img {
+    margin-right: 6px;
+  }
+}
+
+.offcanvas {
+  @media (max-width: 991.98px) {
+    background: #232731 !important;
+
+    .nav-link {
+      color: $color0;
+      padding: 10px 15px;
+    }
+
+    .btn-close {
+      filter: invert(82%) sepia(43%) saturate(464%) hue-rotate(194deg)
+        brightness(98%) contrast(103%);
+    }
+    .searchBar {
+      border-left: none;
+    }
+  }
+}
+
+.footer-area {
+  padding: 30px 0 0px;
+  overflow: hidden;
+
+  @media (max-width: 575.98px) {
+    padding-bottom: 30px;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  address {
+    width: 125px;
+    line-height: 120%;
+
+    @media (max-width: 575.98px) {
+      margin: 0 auto;
+    }
+  }
+
+  .connect-icon {
+    @media (max-width: 767.98px) {
+      grid-column: 1/-1;
+    }
+
+    @media (max-width: 575.98px) {
+      .fs-20 {
+        font-size: 18px;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 15px;
+      margin-top: 10px;
+
+      @media (max-width: 767.98px) {
+        justify-content: center;
+      }
+
+      li {
+        a {
+          width: 35px;
+          height: 35px;
+          color: #485b8f;
+          background: $color0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .footer-weget {
+    ul {
+      column-count: 3;
+
+      @media (max-width: 575.98px) {
+        column-count: 2;
+      }
+
+      li {
+        a {
+          color: $color0;
+          font-size: 14px;
+          padding: 4px 0 !important;
+          display: inline-flex;
+
+          @media (max-width: 575.98px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-list-phone-show {
+  a {
+    color: $color0;
+    font-size: 14px;
+    padding: 4px 0 !important;
+    display: inline-flex;
+  }
+}
+
+.footerIcon {
+  background: transparent !important;
+}
+
+.coinsecExchangeHome {
+  padding-top: 54px;
+  padding-bottom: 42px;
+}
+
+.termsConditionBox {
+  margin-top: 40px;
+
+  // @media (max-width: 768px) {
+  //   margin-top: 55px;
+  // }
+}
+.legalDisclaimerBox {
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}
+.privacyPolicyBox {
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
+}
+.termsBox {
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}
