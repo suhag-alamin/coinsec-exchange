@@ -17,6 +17,7 @@ import usdc from "/assets/images/usdc.svg";
 import usdt from "/assets/images/usdt.svg";
 import loginIcon from "/assets/images/login.svg";
 import coinsecExhange from "/assets/images/coinsec-exchange.svg";
+import search from "/assets/images/search.svg";
 
 // Logo
 export const Logo = () => <img src={logo} alt={logo} />;
@@ -62,6 +63,7 @@ export const Tokenomics = () => (
 export const Eth = () => <img src={eth} alt={eth} />;
 export const Usdt = () => <img src={usdt} alt={usdt} />;
 export const Usdc = () => <img src={usdc} alt={usdc} />;
+export const Search = () => <img src={search} alt={search} />;
 
 export const SeoImg = () => (
   <img src={seo} alt={seo} className="img-fluid w-100" />

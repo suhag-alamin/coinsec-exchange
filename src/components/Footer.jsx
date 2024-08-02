@@ -88,7 +88,7 @@ const Footer = () => {
             </div>
             <div className="col-lg-2">
               <div className="footer-item connect-icon">
-                <div className="fs-14 text-center">Connect with us </div>
+                <div className="fs-20 text-center">Connect with us </div>
                 <ul>
                   <li>
                     <a
@@ -126,7 +126,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="fs-14 text-center fw-medium copyright">
+        <div className="fs-16 text-center fw-medium copyright">
           2024 COINSEC. All rights reserved.
         </div>
       </Container>

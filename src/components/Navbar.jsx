@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import { IoSearchSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import { LoginIcon, Logo } from "./Image";
 import { CiGlobe } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { LoginIcon, Logo, Search } from "./Image";
 
 const NavigationBar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -86,13 +85,8 @@ const LogInfo = ({ closeOffcanvas }) => (
     <Nav.Link href="#" onClick={closeOffcanvas} className="navIcon ">
       <CiGlobe />
     </Nav.Link>
-    <Nav.Link
-      href="#"
-      onClick={closeOffcanvas}
-      className="navIcon"
-      style={{ color: "#94a8fd82" }}
-    >
-      <IoSearchSharp />
+    <Nav.Link href="#" onClick={closeOffcanvas} className="navIcon">
+      <Search />
     </Nav.Link>
     <Nav.Link href="#" onClick={closeOffcanvas}>
       <button className="loginBtn">
